@@ -1,9 +1,119 @@
+/* Global Styles */
 body {
     font-family: 'Oswald' !important;
     font-weight: 300;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 400;
+main {
+  margin: 0 auto;
 }
 
+.centered {
+    text-align: center;
+}
+
+.nav-links {
+ 25px;  
+  justify-content:space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.nav-links ul {
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.nav-links ul li {
+  float: left;
+  list-style: none;
+  padding-left:
+  font-size: 1.3em;
+  margin-bottom:0;
+display: flex;}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color:#333;
+}
+
+/* Home Page */
+#name {
+  font-size: 3.5rem;
+  font-weight:600;
+  display: block;
+}
+
+#home-header {
+  margin-top: 10%;
+}
+
+#main-logo{
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#home-h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+#home-nav button {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+#home-nav {
+    margin-top: 5%;
+}
+
+/* Contact Page */
+#contact-form label {
+  font-weight: normal;
+}
+
+#contact-form textarea {
+  min-height: 200px;
+}
+
+#form-send{
+  border-radius: 2px;
+  background-color: #00BCD4;
+}
+
+/* Underline From Center */
+.underline {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.underline:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background: #00BCD4;
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.underline:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}

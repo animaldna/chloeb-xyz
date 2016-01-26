@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300|Droid+Serif' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div class="twelve columns">
+                        <section class="nav-links">
+                          <img style="width:120px; margin-top: 2%; display:inline;" src="images/logoSmall.png" alt="Chloe Boylan - Developer">
+                          <ul>
+                               <li>
+                                   <a href="/toolset">toolset</a>
+                               </li>
+                               <li>
+                                   <a href="/projects">projects</a>
+                               </li>
+                               <li>
+                                 <a href="/about">about</a>
+                               </li>
+                               <li>
+                                   contact
+                               </li>
+                           </ul>
+                        </section>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="row">
+                  <h1>Get in touch</h1>
+                  <p>Do you have a project that you'd like my help with? Shoot me a message and we can setup a call to discuss it.</p>
+                </div>
+                <div class="row">
+                    <div class="twelve columns">
+                        <form id="contact-form" action="#">
+                            <div class="six columns">
+                              <label for="name-input">Your name</label>
+                              <input class="u-full-width" name="name" type="text" id="name-input">
+                            </div>
+                            <div class="six columns">
+                              <label for="email-input">Your email</label>
+                              <input class="u-full-width" type="email" id="email-input" name="email">
+                            </div>
+                            <div class="twelve columns">
+                              <label for="contact-reason">I'm interested in...</label>
+                              <select class="u-full-width" name="reason" id="contact-reason">
+                                <option value="seo">SEO / Analytics</option>
+                                <option value="dev">Web Development</option>
+                                <option value="dataviz">Dataviz</option>
+                                <option value="ppc">PPC</option>
+                                <option value="other">Other</option>
+                              </select>
+                              <label for="message">Message</label>
+                              <textarea class="u-full-width" name="message" id="message" cols="30" rows="100"></textarea>
+                            </div>
+                            <input id="form-send" type="submit" class="button-primary" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

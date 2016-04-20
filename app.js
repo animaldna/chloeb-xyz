@@ -22,8 +22,8 @@ var emailOpts = {
 };
 
 
-app.listen(80, function(){
-    console.log('app running on port 80');
+app.listen(8080, function(){
+    console.log('app running on port 8080');
 
     app.get('/',function(req,res){
         console.log('got a request');

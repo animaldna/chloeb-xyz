@@ -1,30 +1,35 @@
 <html>
     <head>
-        <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/main.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300|Droid+Serif' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <title></title>
     </head>
-    <body>
+    <body class="animated fadeIn content-anim">
         <div class="container">
             <header>
                 <div class="row">
                     <div class="twelve columns">
                         <section class="nav-links">
-                          <img style="width:120px; margin-top: 2%; display:inline;" src="images/logoSmall.png" alt="Chloe Boylan - Developer">
+                          <a href="file:///Users/fishsticks/Documents/Development/personal-site/public/index.html"><img id="header-logo" src="images/logoSmall.png" alt="Chloe Boylan - Developer"></a>
                           <ul>
                                <li>
-                                   <a href="/toolset">toolset</a>
+                                   <a class="underline" href="file:///Users/fishsticks/Documents/Development/personal-site/public/services.html">services</a>
                                </li>
                                <li>
-                                   <a href="/projects">projects</a>
+                                   <a class="underline" href="file:///Users/fishsticks/Documents/Development/personal-site/public/projects.html">projects</a>
                                </li>
                                <li>
-                                 <a href="/about">about</a>
+                                 <a class="underline" href="file:///Users/fishsticks/Documents/Development/personal-site/public/about.html">about</a>
                                </li>
                                <li>
-                                   contact
+                                  <a class="underline" href="file:///Users/fishsticks/Documents/Development/personal-site/public/contact.html">contact</a>
                                </li>
                            </ul>
                         </section>
@@ -32,38 +37,50 @@
                 </div>
             </header>
             <main>
-                <div class="row">
-                  <h1>Get in touch</h1>
-                  <p>Do you have a project that you'd like my help with? Shoot me a message and we can setup a call to discuss it.</p>
-                </div>
-                <div class="row">
-                    <div class="twelve columns">
-                        <form id="contact-form" action="#">
-                            <div class="six columns">
-                              <label for="name-input">Your name</label>
-                              <input class="u-full-width" name="name" type="text" id="name-input">
-                            </div>
-                            <div class="six columns">
-                              <label for="email-input">Your email</label>
-                              <input class="u-full-width" type="email" id="email-input" name="email">
-                            </div>
-                            <div class="twelve columns">
-                              <label for="contact-reason">I'm interested in...</label>
-                              <select class="u-full-width" name="reason" id="contact-reason">
-                                <option value="seo">SEO / Analytics</option>
-                                <option value="dev">Web Development</option>
-                                <option value="dataviz">Dataviz</option>
-                                <option value="ppc">PPC</option>
-                                <option value="other">Other</option>
-                              </select>
-                              <label for="message">Message</label>
-                              <textarea class="u-full-width" name="message" id="message" cols="30" rows="100"></textarea>
-                            </div>
-                            <input id="form-send" type="submit" class="button-primary" value="Send">
-                        </form>
+              <div class="row">
+                <h1>Get in touch</h1>
+              </div>
+              <div class="row">
+                   <div class="five columns">
+                      <p>Do you have a project or website that needs attention? Drop me a line and we can setup a call to discuss it.</p>
+                      <ul id="contact-info">
+                        <li><i class="fa fa-phone"></i><a id="phone" href="tel:6197867503">619.786.7503</a></li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:reach@chloeb.xyz">reach@chloeb.xyz</a></li>
+                      </ul>
+                    </div>
+                    <div id="contact-form-container" class="seven columns">
+                      <form id="contact-form" action="#">
+                          <div class="six columns">
+                            <label for="name-input">Your name</label>
+                            <input class="u-full-width" name="name" type="text" id="name-input">
+                          </div>
+                          <div class="six columns">
+                            <label for="email-input">Your email</label>
+                            <input class="u-full-width" type="email" id="email-input" name="email">
+                          </div>
+                          <div class="twelve columns">
+                            <label for="contact-reason">I'm interested in...</label>
+                            <select class="u-full-width" name="reason" id="contact-reason">
+                              <option value="seo">SEO / Analytics</option>
+                              <option value="dev">Web Development</option>
+                              <option value="dataviz">Dataviz</option>
+                              <option value="ppc">PPC</option>
+                              <option value="other">Other</option>
+                            </select>
+                            <label for="message">Message</label>
+                            <textarea class="u-full-width" name="message" id="message" cols="30" rows="100"></textarea>
+                          </div>
+                          <input id="form-button" type="submit" class="button-primary" value="Send">
+                      </form>
                     </div>
                 </div>
+                </div>
             </main>
+             <footer>
+                <div>
+                    <p>&#169;&nbsp;2016 Chloe Boylan <br> Built with &#10084; using Node.js</p>
+                </div>
+            </footer>
         </div>
     </body>
 </html>

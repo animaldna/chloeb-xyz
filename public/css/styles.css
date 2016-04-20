@@ -1,90 +1,118 @@
-/* Global Styles */
+/* GLOBAL
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+html {
+  position: relative;
+}
+
 body {
-    font-family: 'Oswald' !important;
-    font-weight: 300;
+  font-family: 'Oswald' !important;
+  font-weight: 300;
+  /*margin: 0 0 100px; */
+}
+
+a {
+  color: #00BCD4 ;
+}
+
+h1 { /*@todo - this should be container based*/
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
 }
 
 main {
   margin: 0 auto;
 }
 
-.centered {
-    text-align: center;
+footer {
+  height: 50px;
+  text-align: center;
+  /*margin-bottom: -20px;*/
+  margin-top:100px;
+  font-size: 0.7em;
+  color: #5b5b5b;
 }
 
-.nav-links {
- 25px;  
-  justify-content:space-between;
-  margin-top: 5%;
-  margin-bottom: 5%;
+#social-links {
+  display: inline-block;
+  margin-top:-30px;
 }
 
-.nav-links ul {
-  align-self: flex-end;
-  margin-bottom: 0;
-}
-
-.nav-links ul li {
+#social-links li {
   float: left;
-  list-style: none;
-  padding-left:
-  font-size: 1.3em;
-  margin-bottom:0;
-display: flex;}
-
-.nav-links ul li a {
-  text-decoration: none;
-  color:#333;
+  margin-right:10px;
 }
 
-/* Home Page */
-#name {
-  font-size: 3.5rem;
-  font-weight:600;
-  display: block;
+/* MISC. STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.centered {
+  text-align: center;
 }
 
-#home-header {
-  margin-top: 10%;
+.flex-center {
+  display: flex;
+  align-items: center;
 }
 
-#main-logo{
-    width: 150px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+.underlined {
+  text-decoration: underline;
+  margin-bottom: 20px;
 }
 
-#home-h1 {
-  font-size: 3rem;
-  margin-top: 20px;
+
+/* ANIMATION & EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* content fadeIn effect */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
-#home-nav button {
-    margin-left: 40px;
-    margin-right: 40px;
+.content-anim {
+  animation-duration: 2s;
 }
 
-#home-nav {
-    margin-top: 5%;
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-/* Contact Page */
-#contact-form label {
-  font-weight: normal;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-#contact-form textarea {
-  min-height: 200px;
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
-#form-send{
-  border-radius: 2px;
-  background-color: #00BCD4;
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
-/* Underline From Center */
+/* navigation underline from center */
 .underline {
   display: inline-block;
   vertical-align: middle;
@@ -97,6 +125,7 @@ display: flex;}
   position: relative;
   overflow: hidden;
 }
+
 .underline:before {
   content: "";
   position: absolute;
@@ -113,7 +142,417 @@ display: flex;}
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
+
 .underline:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
   left: 0;
   right: 0;
 }
+
+
+
+/* button hover effect */
+.hvr-grow {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* HEADER & NAVIGATION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#header-logo {
+  height: 120px;
+}
+
+.nav-links {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.nav-links ul {
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
+.nav-links ul li {
+  float: left;
+  list-style: none;
+  padding-left: 15px;
+  font-size: 1.3em;
+  margin-bottom:0;
+
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color:#333;
+}
+
+.active-nav {
+  font-weight: bold;
+}
+
+
+/* HOME PAGE
+@todo - fix spacing between items 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#home-container {
+  margin-top: 5%;
+}
+
+#home-h1 {
+  font-size: 3.5rem;
+}
+
+#main-logo{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+}
+
+#name {
+  font-size: 4rem;
+  font-weight:600;
+  display: block;
+}
+
+#home-nav {
+    margin-top: 5%;
+}
+
+#home-nav-ul {
+  display: flex;
+  justify-content: center;
+}
+
+#home-nav button {
+    margin: 0 25px 0 25px;
+    min-width: 127px;
+}
+
+
+
+/* SERVICES PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.dropdowns {
+  display: flex;
+  align-items: center;
+}
+
+.dropdowns h2 {
+  margin-left: 5px;
+}
+
+#certified {
+  font-size: 1.3rem;
+}
+
+.service-list li {
+  display: inline-block;
+  margin-right:10px;
+}
+
+.service-list li:last-child {
+  /*margin-right:0;*/
+}
+
+.service-list li i {
+  font-size : 1rem;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.service-details {
+  display: none;
+  margin: 10px 0  !important;
+}
+
+.service-details-container {
+  margin-top: 20px;
+}
+
+.help-btn {
+  display: flex;
+  font-weight: bold;
+  color: #FFAB40;
+  width: 300px;
+  height: 80px;
+  border: 3px solid #FFAB40;
+  justify-content: center;
+  align-items: center;
+}
+
+.help-btn-mobile {
+  background-color: #FFAB40;
+  color: #FFF;
+  width: 250px;
+  height: 65;
+  margin-bottom: 20px;
+}
+
+.help-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 200px;*/
+}
+
+#analytics-help {
+  height: 300px;
+}
+
+.help-anchors {
+  text-decoration: none;
+}
+
+.service-icon {
+ font-size: 1.5em !important;
+}
+
+.service-headline {
+  border-bottom: 2px solid #ddd;
+  cursor: pointer;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: #dbdbdb;
+}
+
+.mobile-headline {
+  color: #333 !important;
+}
+
+.service-headline h2 {
+  margin-bottom: 10px;
+}
+
+.selected {
+  color: #333;
+  border-bottom: 2px solid #333;
+}
+
+.selected h2 {
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block !important;
+}
+
+#service-headlines {
+  margin-left: 0 !important;
+}
+
+
+/* PROJECTS PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.project-row {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+}
+.project-img {
+  margin:10px 0;
+  -webkit-box-shadow: 0px 0px 19px 1px rgba(191,191,191,0.91);
+  -moz-box-shadow: 0px 0px 19px 1px rgba(191,191,191,0.91);
+  box-shadow: 0px 0px 19px 1px rgba(191,191,191,0.91);
+}
+
+.project-img img{
+  width: 100%;
+}
+
+.project-details h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.project-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+
+.keyword {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.project-details h4 {
+  font-size: 1em;
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.styled-ul {
+  list-style: circle inside;
+}
+
+/* ABOUT PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#chloe {
+  width: 100%;
+  float:left;
+}
+
+#caption {
+  color: #adadad;
+  font-size: 0.6em;
+}
+
+
+
+/* CONTACT PAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#contact-info i {
+  display: inline-block;
+  margin-right:20px;
+}
+
+#contact-form label {
+  font-weight: normal;
+}
+
+#contact-form textarea {
+  min-height: 200px;
+}
+
+#contact-form-container { /*@todo - rename this to container*/
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+#form-button{
+  border-radius: 2px;
+  width: 100%;
+  background-color: #00BCD4;
+}
+
+#phone {
+  margin-left: 5px;
+}
+
+#position-input {
+  display: none;
+}
+
+#warning {
+  display:inline;
+  float:left;
+  padding-right:15px;
+  margin-top:10px;
+  color:#ff8930;
+}
+
+#spam {
+  color: #d10000;
+}
+
+#success-container p {
+  margin-bottom:0;
+}
+
+#success {
+  color: #3cea51;
+  display: inline;
+  float:left;
+  padding-right:15px;
+  margin-top:15px;
+}
+
+/* MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (max-width: 677px) {
+  body {
+    margin-top: 50px;
+  }
+  #home-nav-ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  #home-nav-ul li {
+    margin: 10px;
+  }
+  #home-nav-ul li button {
+    min-width: 200px;
+  }
+  .nav-links {
+    display: block;
+  }
+  .nav-links img {
+    display: block;
+    margin: 0 auto;
+  }
+  .nav-links ul {
+    margin: 30px auto;
+  }
+  #success {
+    height:50px;
+  }
+}
+
+@media (max-width: 500px){
+  #main-logo {
+    width: 40%;
+  }
+  #home-h1 {
+    font-size: 2.5rem;
+  }
+  body {
+    margin-top: 50px;
+  }
+  #name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 350px){
+  .nav-links {
+    font-size: 0.9em;
+  }
+}
+                                           +-------------------------------+
+                                           |                               |
+                                           |  this is entirely necessary.  |
+                                           |                               |
+                                           +-------------------------------+
+                                              o
+                                             o
+                     _._                    o
+               _,,-''' ''-,_ }'._''.,_.=._
+            ,-'      _ _    '        (  @)'-,
+          ,'  _..==;;::_::'-     __..----'''}
+         :  .'::_;==''       ,'',: : : '' '}
+        }  '::-'            /   },: : : :_,'
+       :  :'     _..,,_    '., '._-,,,--\'    _
+      :  ;   .-'       :      '-, ';,__\.\_.-'
+     {   '  :    _,,,   :__,,--::',,}___}^}_.-'
+     }        _,'__''',  ;_.-''_.-'
+    :      ,':-''  ';, ;  ;_..-'
+_.-' }    ,',' ,''',  : <>
+_.-''{    { ; ; ,', '  :
+      }   } :  ;_,' ;  }
+       {   ',',___,'   '
+       ',           ,'
+          '-,,__,,-'
+

@@ -18,8 +18,12 @@
   "homepage": "https://github.com/animaldna/personal-site",
   "dependencies": {
     "backbone": "^1.2.2",
+    "body-parser": "^1.15.0",
     "ejs": "^2.3.3",
     "express": "^4.13.3",
+    "express-useragent": "^0.2.4",
+    "nodemailer": "^2.3.2",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "underscore": "^1.8.3"
   }
 }

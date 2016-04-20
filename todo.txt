@@ -1,3 +1,0 @@
-##TODO
-
-* dynamically insert page title and description into head on render

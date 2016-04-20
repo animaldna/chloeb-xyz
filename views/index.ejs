@@ -1,10 +1,44 @@
-<% include partials/head %>
-
-<div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6col">
-        <h1>hi, i'm chloe.</h1>
-        <img src="/public/images/chloe.jpg" alt="Chloe with her favorite dogfriend, Luna" id="photo">
-    </div>
-</div>
-
-<% include partials/footer %>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300|Droid+Serif' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="public/css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="public/css/styles.css">
+        <link rel="shortcut icon" href="public/images/favicon.ico" type="image/x-icon" />
+        <title>San Diego Development &amp; Digital Marketing | chloeb.xyz</title>
+        <meta name="description" content="San Diego-based web development and digital marketing services for individuals and small businesses. PPC management, SEO, web analytics, and more.">
+    </head>
+    <body class="flex-center animated fadeIn content-anim">
+        <div id="home-container" class="container">
+            <section>
+                <div class="row">
+                    <div class="twelve columns">
+                        <span id="name" class="centered">chloe boylan</span>
+                        <h1 id="home-h1" class="centered">san diego based<br>development <span style="font-weight:400;">&amp;</span> digital marketing</h1>
+                        <img id="main-logo" src="public/images/robozelle.png"> 
+                        
+                    </div>
+                </div>
+            </section>
+            <section id="home-nav">
+                <div class="row">
+                    <div class="twelve columns">
+                        <ul id="home-nav-ul">
+                            <li><a href="/services"><button class="underline">services</button></a></li>
+                            <li><a href="/projects"><button class="underline">projects</button></a></li>
+                            <li><a href="/about"><button class="underline">about</button></a></li>
+                            <li><a href="/contact"><button class="underline">contact</button></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div>
+                    <p>&#169;&nbsp;2016 Chloe Boylan <br> Built with &#10084; using Node.js</p>
+                </div>
+            </footer>
+        </div>        
+    </body>
+</html>

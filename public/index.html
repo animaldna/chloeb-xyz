@@ -1,33 +1,43 @@
 <html>
     <head>
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="js/typed.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300|Droid+Serif' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <title>San Diego Development &amp; Digital Services | chloeb.xyz</title>
     </head>
-    <body>
-        <div class="container">
-            <section id="home-header">
+    <body class="flex-center animated fadeIn content-anim">
+        <div id="home-container" class="container">
+            <section>
                 <div class="row">
                     <div class="twelve columns">
                         <span id="name" class="centered">chloe boylan</span>
+                        <h1 id="home-h1" class="centered">san diego based<br>development <span style="font-weight:400;">&amp;</span> digital marketing</h1>
                         <img id="main-logo" src="images/robozelle.png"> 
-                        <h1 id="home-h1" class="centered">development <span style="font-weight:400;">and</span> digital services</h1>
+                        
                     </div>
                 </div>
             </section>
             <section id="home-nav">
                 <div class="row">
-                    <div class="twelve columns centered">
-                        <button class="underline">toolset</button>
-                        <button class="underline">projects</button>
-                        <button class="underline">about</button>
-                        <button class="underline">contact</button>
+                    <div class="twelve columns">
+                        <ul id="home-nav-ul">
+                            <li><a href="file:///Users/fishsticks/Documents/Development/personal-site/public/services.html"><button class="underline">services</button></a></li>
+                            <li><button class="underline">projects</button></li>
+                            <li><button class="underline">about</button></li>
+                            <li><a href="file:///Users/fishsticks/Documents/Development/personal-site/public/contact.html"><button class="underline">contact</button></a></li>
+                        </ul>
                     </div>
                 </div>
             </section>
-        </div>
+            <footer>
+            <div>
+                <p>&#169;&nbsp;2016 Chloe Boylan <br> Built with &#10084; using Node.js</p>
+            </div>
+        </footer>
+        </div>        
     </body>
 </html>

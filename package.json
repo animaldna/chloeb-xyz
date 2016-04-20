@@ -1,5 +1,5 @@
 {
-  "name": "personal-site",
+  "name": "chloeb-xyz",
   "version": "1.0.0",
   "description": "My personal site built using node, express, and backbone. And also beer. ",
   "main": "app.js",
@@ -8,16 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/animaldna/personal-site.git"
+    "url": "https://github.com/animaldna/chloeb-xyz.git"
   },
   "author": "Chloe Boylan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/animaldna/personal-site/issues"
+    "url": "https://github.com/animaldna/chloeb-xyz/issues"
   },
-  "homepage": "https://github.com/animaldna/personal-site",
+  "homepage": "https://github.com/animaldna/chloeb-xyz",
   "dependencies": {
-    "backbone": "^1.2.2",
     "body-parser": "^1.15.0",
     "ejs": "^2.3.3",
     "express": "^4.13.3",
